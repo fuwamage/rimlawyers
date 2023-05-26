@@ -1,0 +1,6 @@
+@font-face {
+	font-family: 'Skema Pro Title';
+	src: url('SkemaProTitle-Medium.woff2') format('woff2'), url('SkemaProTitle-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}

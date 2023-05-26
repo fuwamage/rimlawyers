@@ -8,4 +8,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        watch: {
+          // https://rollupjs.org/configuration-options/#watch
+        },
+      },
 });
