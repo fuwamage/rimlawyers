@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto+Slab:wght@600&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/isidora" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/aoboshi-one" rel="stylesheet">
     <link
@@ -108,20 +109,74 @@
     <section>
 
     </section>
-    <section>
-        <div class="container  mx-auto px-4 py-8 pt-28">
+    {{-- Our Legal Practice Areas --}}
+    <section class="py-10 bg-[#F2F2F2]">
+        <div class="container py-12">
+            <p class="text-sm text-center text-[#FFA028] font-aoboshi-one dark:text-gray-400 uppercase">Services</p>
+            <h2 class="text-2xl text-center text-rim-title font-aoboshi-one  dark:text-white mb-6 capitalize">Our Legal Practice Areas</h2>
 
         </div>
     </section>
     {{-- Why Choose Us --}}
     <section class="py-10 ">
         <div class="container py-12">
-            <p class="text-sm text-center text-[#FFA028] font-aoboshi-one dark:text-gray-400 uppercase">Fact</p>
-            <h2 class="text-2xl text-center text-rim-title font-aoboshi-one  dark:text-white mb-6 capitalize">Why Choose
-                Us</h2>
-        </div>
-        <div class="container w-[fit-content] mb-10">
-
+            <div class="container flex ">
+                <div class="container px-20">
+                    <img class="h-[378px] w-[368px] object-none float-right" src="/assets/images/models-choose-us.png"
+                        alt="">
+                </div>
+                <div class="container mt-[-40px]">
+                    <div class="container ">
+                        <p class="text-sm text-left text-[#FFA028] font-aoboshi-one dark:text-gray-400 uppercase">Facts
+                        </p>
+                        <h2 class="text-2xl text-left text-rim-title font-aoboshi-one  dark:text-white mb-6 capitalize">
+                            Why Choose
+                            Us?</h2>
+                    </div>
+                    <div class="container flex">
+                        <div class="container w-[fit-content] px-5">
+                            <div class="w-10 h-10 rounded-full bg-white shadow-sm">
+                                <img class="h-auto max-w-lg mx-auto pt-1" src="/assets/images/icon3.png" alt="...">
+                            </div>                            
+                        </div>
+                        <div class="container">
+                            <p class="font-roboto text-[#243C7B] text-[18px] mt-[6px]">Maximum Practice Area</p>
+                            <p class="font-inter text-[#5A6FA5] max-w-[390px] text-[12px]">As a leading law firm,we are giving solutions for business, family, finance, real estate,
+                                divorce etc.</p>
+                        </div>
+                    </div>
+                    <div class="container flex">
+                        <div class="container w-[fit-content] px-5">
+                            <div class="w-10 h-10 rounded-full bg-white shadow-sm">
+                                <img class="h-auto max-w-lg mx-auto pt-1" src="/assets/images/icon3.png" alt="...">
+                            </div>                            
+                        </div>
+                        <div class="container">
+                            <p class="font-roboto text-[#243C7B] text-[18px] mt-[6px]">Playing It Straight</p>
+                            <p class="font-inter text-[#5A6FA5] max-w-[390px] text-[12px]">We earn trust and respect from others by living and working according to time-honored
+                                principles and ensuring honest and open communication and responsible action.</p>
+                        </div>
+                    </div>
+                    <div class="container flex">
+                        <div class="container w-[fit-content] px-5">
+                            <div class="w-10 h-10 rounded-full bg-white shadow-sm">
+                                <img class="h-auto max-w-lg mx-auto pt-1" src="/assets/images/icon3.png" alt="...">
+                            </div>                            
+                        </div>
+                        <div class="container">
+                            <p class="font-roboto text-[#243C7B] text-[18px] mt-[6px]">Preferred Fee Structure</p>
+                            <p class="font-inter text-[#5A6FA5] max-w-[390px] text-[12px]">Generally, unless the work undertaken is governed by a fixed tariff, we would normally
+                                charge a fee calculated on a time basis in accordance with an agreed hourly rate. We are
+                                prepared to charge a fixed fee for the preparation of standard contracts, registration
+                                of servitudes, leases etc.</p>
+                        </div>                        
+                    </div>
+                    <div class="container inline-flex flex-col items-center py-5 max-w-[545px]">
+                        <p class="mb-5">FREE CONSULTATION through whatsapp!</p>
+                        <a href="https://wa.link/3pbcwl"  target="_BLANK" class="uppercase text-white bg-[#243C7B] font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 ">Chat</a>
+                    </div>                
+                </div>
+            </div>
         </div>
     </section>
     {{-- Services --}}

@@ -37,7 +37,8 @@ export default {
       'inter': ['inter', 'sans-serif'],
       'aoboshi-one': ['aoboshi one', 'sans-serif'],
       'roboto-slab': ['roboto slab', 'serif'],
-      'anek-bangla': ['Anek Bangla', 'sans-serif'],    
+      'anek-bangla': ['Anek Bangla', 'sans-serif'],
+      'roboto': ['Roboto', 'sans-serif'],     
     },
   },
   plugins: [
