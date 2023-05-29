@@ -27,6 +27,7 @@ export default {
       'rim-title': '#243C7B',
       'rim-text': '#7B7B7B',
       'rim-white': '#F2F2F2',
+      'rim-black': '#333333',
     },
     container: {
       center: true,
