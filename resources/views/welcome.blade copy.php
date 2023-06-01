@@ -122,7 +122,7 @@
                             <img class="resize-none h-auto max-w-full" src="/assets/images/icon1.png" alt="rim">
                         </div>
                         <div class="block max-w-sm">
-                            <p class="text-left">30+</p>
+                            <p class="text-left" id="numberOne">30+</p>
                             <p class="text-left font-isidora text-12px">Expert Lawyers</p>
                         </div>
                     </button>
