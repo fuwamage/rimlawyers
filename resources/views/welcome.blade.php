@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="max-w-full overflow-x-hidden">
+<html class="max-w-full overflow-x-hidden" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="utf-8">
@@ -18,11 +18,33 @@
         rel="stylesheet">
     <link href="/assets/fonts/skemaprotitle.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+    <style>
+        .wa-fixed {
+            display: block;
+            position: fixed;
+            right: 20px;
+            z-index: 9999999999;
+            bottom: 69px;
+            background: white;
+            outline: dashed 2px #40c351;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+        }
+
+        .wa-ico {
+            margin-top: 4px;
+            margin-left: 6px;
+        }
+    </style>
+
 
 
 </head>
 
 <body class="max-w-full overflow-x-hidden">
+
     <nav
         class="bg-white dark:bg-gray-900 fixed w-screen z-50 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div class="w-screen flex flex-wrap items-center gap-4 mx-auto px-6 py-4 justify-between sm:justify-center">
@@ -32,7 +54,7 @@
             <div class="font-isidora flex gap-4 md:order-2">
                 {{-- Phone Button in navbar --}}
                 <button type="button"
-                    class="hidden sm:block text-orange-rim bg-white border border-orange-rim focus:outline-none hover:bg-gray-100  font-medium rounded-full text-sm px-4 py-3 mb-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                    class="hidden sm:block text-orange-rim bg-white border border-orange-rim focus:outline-none  cursor-default font-medium rounded-full text-sm px-4 py-3 mb-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
                     <div class="flex items-center">
                         {{-- <img src="/assets/images/phone-light.png" class="max-h-full max-w-full mr-1" alt="RIM Lawyers"> --}}
                         <div
@@ -48,9 +70,9 @@
                     </div>
                 </button>
                 {{-- Contact Us Button in navbar --}}
-                <button type="button"
+                <a href="/contact-us"
                     class="hidden sm:block text-white bg-orange-rim border border-orange-rim focus:outline-none hover:bg-orange-rim-hover font-medium rounded-full text-sm px-4 pr-1 py-1 mr-1 mb-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                    <div class="flex items-center">
+                    <div class="flex items-center mt-[3px]">
                         Contact Us
                         <div class="ml-6 rounded-full h-8 w-8 flex items-center justify-center bg-orange-rim-hover">
                             <svg class="mt-1 ml-2" fill="currentColor" viewBox="0 0 32 32"
@@ -61,7 +83,7 @@
                             </svg>
                         </div>
                     </div>
-                </button>
+                </a>
 
                 {{-- Sticky Navbar for mobile --}}
                 <button data-collapse-toggle="navbar-sticky" type="button"
@@ -81,32 +103,32 @@
                 <ul
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="#"
+                        <a href="./#home"
                             class="block py-2 pl-3 pr-4 mr-5 text-white bg-rim-active rounded md:bg-transparent md:text-rim-active md:p-0 md:dark:text-rim-active"
                             aria-current="page">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="./#services"
                             class="block py-2 pl-3 pr-4 mr-5 text-rim-normal rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-rim-active md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             Services
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="./#reason"
                             class="block py-2 pl-3 pr-4 mr-5 text-rim-normal rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-rim-active md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             Why Choose Us
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="./#lawyers"
                             class="block py-2 pl-3 pr-4 mr-5 text-rim-normal rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-rim-active md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             Our Lawyers
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="./#partners"
                             class="block py-2 pl-3 pr-4 mr-5 text-rim-normal rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-rim-active md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             Partners
                         </a>
@@ -118,7 +140,8 @@
 
     <main class="md:pt-40 lg:pt-24 ">
         {{-- Experienced in law, adept in all situations. --}}
-        <section class="pt-20 bg-white md:max-h-[529px] md:mb-20 min-h-[100vh] md:min-h-[90vh] relative z-20">
+        <section id="home"
+            class="pt-20 bg-white md:max-h-[529px] md:mb-20 min-h-[100vh] md:min-h-[90vh] relative z-20">
 
             <div class="container py-12">
                 <div class="container relative ">
@@ -241,6 +264,15 @@
         {{-- Committed To Helping Our Clients Succeed --}}
         <section class="pt-20 bg-[#FFF4E7] md:min-h-[530px] md:max-h-[530px] relative z-10">
             <div class="container py-12">
+                <div class="container relative ">
+                    <img class="absolute right-[851px] h-auto top-[-42px]" src="/assets/images/orna3.png"
+                        alt="ornaments">
+                    <img class="absolute right-[967px] h-auto top-[240px]" src="/assets/images/orna-wave.png"
+                        alt="ornaments">
+                    <img class="absolute right-[95px] h-auto top-[168px]" src="/assets/images/orna4.png"
+                        alt="ornaments">
+
+                </div>
                 <div class="container flex flex-wrap sm:flex-nowrap gap-8">
                     <div class="container w-full h-fit pr-[6rem] flex md:justify-end mr-[-90px]">
                         <img class="rounded-full w-[224px] h-[224px] float-right outline-dashed outline-[5px] outline-[#e9d9c7]"
@@ -296,7 +328,7 @@
 
                     </div>
                 </div>
-                <div class="container flex justify-center mt-10">
+                <div class="container flex justify-center mt-10 flex-wrap">
                     {{-- Business Partners --}}
                     <div class="group min-w-[146px] max-h-[128px] px-3 py-4 bg-white border border-gray-200 shadow mr-6 ml-6 mt-10 mb-4 text-center"
                         data-aos="fade-up" data-aos-duration="500">
@@ -349,7 +381,7 @@
                                 <span id="numberHappyClients">0</span>+
                             </h5>
                         </a>
-                        <p class="mt-[-5px] font-isidora text-[12px] text-[#7B7B7B] dark:text-gray-400  mb-4">
+                        <p class="mt-[-8px] font-isidora text-[12px] text-[#7B7B7B] dark:text-gray-400  mb-4">
                             Happy Clients
                         </p>
                     </div>
@@ -391,8 +423,14 @@
 
         </section>
         {{-- Our Legal Practice Areas --}}
-        <section class="py-10 bg-[#F2F2F2] ">
+        <section id="legal" class="py-10 bg-[#F2F2F2] ">
             <div class="container py-12 mt-[100px]">
+                <div class="container relative ">
+                    <img class="absolute right-[0px] h-auto top-[-42px]" src="/assets/images/orna5.png"
+                        alt="ornaments">
+                    <img class="absolute left-[242px] h-auto top-[531px]" src="/assets/images/orna6.png"
+                        alt="ornaments">
+                </div>
                 <p class="text-sm text-center text-[#FFA028] font-aoboshi-one dark:text-gray-400 uppercase">
                     Services
                 </p>
@@ -428,7 +466,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="#">
+                                    <a>
                                         <h5
                                             class="mb-2 text-[16px] font-roboto tracking-tight text-[#243C7B] dark:text-white group-hover:text-white min-h-[40px]">
                                             Corporate law and
@@ -459,7 +497,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="#">
+                                    <a>
                                         <h5
                                             class="mb-2 text-[16px] font-roboto tracking-tight text-[#243C7B] dark:text-white group-hover:text-white min-h-[40px]">
                                             Capital Market
@@ -488,7 +526,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="#">
+                                    <a>
                                         <h5
                                             class="mb-2 text-[16px] font-roboto tracking-tight text-[#243C7B] dark:text-white group-hover:text-white min-h-[40px]">
                                             Foreign and Domestic Investment
@@ -517,7 +555,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="#">
+                                    <a>
                                         <h5
                                             class="mb-2 text-[16px] font-roboto tracking-tight text-[#243C7B] dark:text-white group-hover:text-white min-h-[40px]">
                                             Labor Law
@@ -546,7 +584,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="#">
+                                    <a>
                                         <h5
                                             class="mb-2 text-[16px] font-roboto tracking-tight text-[#243C7B] dark:text-white group-hover:text-white min-h-[40px]">
                                             Project Financing
@@ -575,7 +613,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="#">
+                                    <a>
                                         <h5
                                             class="mb-2 text-[16px] font-roboto tracking-tight text-[#243C7B] dark:text-white group-hover:text-white min-h-[40px]">
                                             Company Secretarial
@@ -611,7 +649,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="#">
+                                    <a>
                                         <h5
                                             class="mb-2 text-[16px] font-roboto tracking-tight text-[#243C7B] dark:text-white group-hover:text-white">
                                             Corporate law and
@@ -677,8 +715,16 @@
             </div>
         </section>
         {{-- Why Choose Us --}}
-        <section class="py-10 relative">
+        <section id="reason" class="py-10 relative">
             <div class="container py-12 mt-[100px]">
+                <div class="container relative ">
+                    <img class="absolute left-[398px] h-auto top-[-58px]" src="/assets/images/orna-wave.png"
+                        alt="ornaments">
+                    <img class="absolute right-[733px] h-auto top-[359px]" src="/assets/images/orna-wave.png"
+                        alt="ornaments">
+                    <img class="absolute right-[99px] h-auto top-[132px]" src="/assets/images/orna7.png"
+                        alt="ornaments">
+                </div>
                 <div class="container flex flex-wrap sm:flex-nowrap gap-8">
                     <div class="container w-full h-fit" data-aos="zoom-out" data-aos-duration="500">
                         <img class="w-full sm:h-[378px] sm:w-[368px] object-none float-right"
@@ -769,8 +815,14 @@
             </div>
         </section>
         {{-- Services --}}
-        <section class="py-10 bg-[#F2F2F2]">
+        <section id="services" class="py-10 bg-[#F2F2F2]">
             <div class="container py-12  mt-[30px]">
+                <div class="container relative ">
+                    <img class="absolute left-[263px] h-auto top-[70px]" src="/assets/images/orna8.png"
+                        alt="ornaments">
+                    <img class="absolute right-[384px] h-auto top-[536px]" src="/assets/images/orna-wave.png"
+                        alt="ornaments">
+                </div>
                 <p class="text-sm text-center text-[#FFA028] font-aoboshi-one dark:text-gray-400 uppercase"
                     data-aos="fade-up" data-aos-duration="500">
                     Services
@@ -792,7 +844,8 @@
                                         Litigation
                                     </p>
                                     <p class="font-inter text-[12px] text-rim-white">
-                                        Our specialise in the handling of
+                                        Our specialise in the handling of criminal case, civil case, arbitration and
+                                        bankruptcy case.
                                     </p>
                                 </div>
                             </div>
@@ -877,8 +930,16 @@
 
         </section>
         {{-- Lawyers --}}
-        <section class="py-10 mb-20">
+        <section id="lawyers" class="py-10 mb-20">
             <div class="container py-12 max-w-full">
+                <div class="container relative ">
+                    <img class="absolute left-[-102px] h-auto top-[471px]" src="/assets/images/orna9.png"
+                        alt="ornaments">
+                    <img class="absolute right-[-103px] h-auto top-[597px]" src="/assets/images/orna10.png"
+                        alt="ornaments">
+                    <img class="absolute right-[33px] h-auto top-[104px]" src="/assets/images/orna-wave.png"
+                        alt="ornaments">
+                </div>
                 <p class="text-sm text-center text-[#FFA028] font-aoboshi-one dark:text-gray-400 uppercase"
                     data-aos="fade-up" data-aos-duration="500">
                     Lawyers
@@ -889,7 +950,7 @@
                 </h2>
             </div>
 
-            <div class="max-w-full">
+            <div class="max-w-full md:max-h-[525px] md:min-h-[525px]">
                 <div class="container flex w-fit mb-20" data-aos="fade-right" data-aos-duration="1200">
                     <div class="container px-8 mx-auto relative">
                         <img class="absolute rounded-full w-36 h-36 outline outline-2 outline-white outline-dashed ml-[18%]"
@@ -902,7 +963,7 @@
                                 <p class="font-inter text-[12px] text-rim-white">The Managing Director</p>
                             </div>
                             <div class="container absolute bottom-[-23px] px-2 text-center w-[16rem]">
-                                <button type="button"
+                                <button type="button" data-modal-target="cv-rizal" data-modal-toggle="cv-rizal"
                                     class="text-white bg-[#415EA9] hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                                     Curiculum Vitae
                                 </button>
@@ -922,7 +983,8 @@
                                     <p class="font-inter text-[12px] text-rim-white">Lawyer</p>
                                 </div>
                                 <div class="container absolute bottom-[-23px] px-2 text-center w-[16rem]">
-                                    <button type="button"
+                                    <button type="button" data-modal-target="cv-ibrahim"
+                                        data-modal-toggle="cv-ibrahim"
                                         class="text-white bg-[#415EA9] hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                                         Curiculum Vitae
                                     </button>
@@ -944,7 +1006,8 @@
                                     </p>
                                 </div>
                                 <div class="container absolute bottom-[-23px] px-2 text-center w-[16rem]">
-                                    <button type="button"
+                                    <button type="button" data-modal-target="cv-mansyur"
+                                        data-modal-toggle="cv-mansyur"
                                         class="text-white bg-[#415EA9] hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                                         Curiculum Vitae
                                     </button>
@@ -963,8 +1026,7 @@
                                     <p class="font-inter text-[12px] text-rim-white">Lawyer</p>
                                 </div>
                                 <div class="container absolute bottom-[-23px] px-2 text-center w-[16rem]">
-                                    <button type="button" data-modal-target="staticModal"
-                                        data-modal-toggle="staticModal"
+                                    <button type="button" data-modal-target="cv-siska" data-modal-toggle="cv-siska"
                                         class="text-white bg-[#415EA9] hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                                         Curiculum Vitae
                                     </button>
@@ -977,7 +1039,7 @@
         </section>
 
         {{-- Clients --}}
-        <section class="py-10 bg-[#F2F2F2]">
+        <section id="partners" class="py-10 bg-[#F2F2F2] mt-[-120px] pt-[250px]">
             <div class="container">
                 <p class="text-sm text-center text-[#FFA028] font-aoboshi-one dark:text-gray-400 uppercase">
                     Partners
@@ -1008,15 +1070,26 @@
                 <div class="border">
                     <hr class="border-t-[6px] border-orange-rim" />
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.5801396786774!2d106.78148686960401!3d-6.221393816403764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1ccb384f011%3A0x177e810eec32a7f4!2sINFINITI%20OFFICE%20%7C%20Virtual%20Office%20Jakarta%20Selatan!5e0!3m2!1sen!2sid!4v1684841818112!5m2!1sen!2sid"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31730.515054142343!2d106.72843636571804!3d-6.222212288019557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f156755e76d3%3A0x9d9e1e7a3127718b!2sRIM%20Lawyers!5e0!3m2!1sen!2sid!4v1685957509048!5m2!1sen!2sid"
                         width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <hr class="border-t-[6px] border-[#FFF4E7]" />
                 </div>
             </div>
         </section>
+
+        {{-- Footer --}}
         <footer class="bg-white dark:bg-gray-900">
+            <div class="container wa-fixed">
+                <a href="https://wa.link/3pbcwl" target="_BLANK">
+                
+                <div
+                    class="h-[48px] w-[48px] mr-3 wa-ico bg-[url('/assets/images/icons8-whatsapp-48.png')] hover:bg-[url('/assets/images/icons8-whatsapp.gif')]">
+                </div>
+            </a>
+            </div>
+
+            <hr class="border-t-[6px] border-[#FFF4E7]" />
             <div class="mx-auto w-full p-4 py-6 lg:py-8">
                 <div class="flex flex-wrap justify-between md:justify-evenly gap-8 w-full max-w-6xl px-8 mx-auto">
                     <div
@@ -1038,26 +1111,26 @@
                             </h2>
                             <ul class="font-inter text-[#7B7B7B] dark:text-gray-400 font-medium text-sm">
                                 <li>
-                                    <a href="/" class="hover:underline">
+                                    <a class="hover:text-rim-title">
                                         Corporate Law &
                                         <br>
                                         Corporate Restructuring
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/" class="hover:underline">Capital Market</a>
+                                    <a class="hover:text-rim-title">Capital Market</a>
                                 </li>
                                 <li>
-                                    <a href="/" class="hover:underline">Foreign & Domestic Investment</a>
+                                    <a class="hover:text-rim-title">Foreign & Domestic Investment</a>
                                 </li>
                                 <li>
-                                    <a href="/" class="hover:underline">Labor Law</a>
+                                    <a class="hover:text-rim-title">Labor Law</a>
                                 </li>
                                 <li>
-                                    <a href="/" class="hover:underline">Project Financing</a>
+                                    <a class="hover:text-rim-title">Project Financing</a>
                                 </li>
                                 <li>
-                                    <a href="/" class="hover:underline">Company Secretarial</a>
+                                    <a class="hover:text-rim-title">Company Secretarial</a>
                                 </li>
                             </ul>
                         </div>
@@ -1067,16 +1140,7 @@
                             </h2>
                             <ul class="font-inter text-[#7B7B7B] dark:text-gray-400 font-medium text-sm">
                                 <li>
-                                    <a href="/" class="hover:underline ">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="/" class="hover:underline">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="/" class="hover:underline">How to Hire Us</a>
-                                </li>
-                                <li>
-                                    <a href="/" class="hover:underline">Law Certification</a>
+                                    <a href="/contact-us" class="hover:underline">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
@@ -1085,20 +1149,34 @@
                                 Address
                             </h2>
                             <ul class="font-inter text-[#7B7B7B] dark:text-gray-400 font-medium text-sm">
-                                <li class="mb-2">
-                                    <a>Belleza BSA Tower, 1st Floor Unit 106, Jl.
+                                <li class="mb-2 flex">
+                                    <div class="w-auto min-w-[26px] h-[26px] mr-2 rounded-full bg-[#FFF4E7] shadow-sm">
+                                        <img class="h-auto max-w-lg mx-auto pt-2" src="/assets/images/icoadd1.png"
+                                            alt="...">
+                                    </div>
+                                    <a class="w-full">Belleza BSA Tower, 1st Floor Unit 106, Jl.
                                         Letjen Soepeno no.34, Permata Hijau, Jakarta 12210.
                                     </a>
                                 </li>
-                                <li class="mb-2">
-                                    <a>
+                                <li class="mb-2 flex">
+                                    <div class="w-auto min-w-[26px] h-[26px] mr-2 rounded-full bg-[#FFF4E7] shadow-sm">
+                                        <img class="h-auto max-w-lg mx-auto pt-1" src="/assets/images/icoadd2.png"
+                                            alt="...">
+                                    </div>
+                                    <a class="w-full">
                                         +62-21-58905002 ext. 101 /
                                         <br>
-                                        08111781877
+                                        +62-88-11778777
+                                        <br>
+                                        +62-81-11561877
                                     </a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="#" class="hover:underline">
+                                <li class="mb-2 flex">
+                                    <div class="w-auto min-w-[26px] h-[26px] mr-2 rounded-full bg-[#FFF4E7] shadow-sm">
+                                        <img class="h-auto max-w-lg mx-auto pt-2" src="/assets/images/icoadd3.png"
+                                            alt="...">
+                                    </div>
+                                    <a href="#" class="hover:underline w-full">
                                         mail@rimlawyers.co.id
                                     </a>
                                 </li>
@@ -1129,181 +1207,1056 @@
 
 
         <!-- Main modal -->
-        <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+        <!-- CV Siska -->
+        <div id="cv-siska" tabindex="-1"
             class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-            <div class="relative w-full max-w-2xl max-h-full">
+            <div class="relative w-full max-w-7xl max-h-full ">
                 <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                     <!-- Modal header -->
-                    <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
+                        <h3
+                            class="text-xl font-medium text-gray-900 dark:text-white absolute w-[-webkit-fill-available] text-center mr-4">
                             Curiculum Vitae
                         </h3>
                         <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="staticModal">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            class="z-10 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            data-modal-hide="cv-siska">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                     clip-rule="evenodd"></path>
                             </svg>
+                            <span class="sr-only">Close modal</span>
                         </button>
                     </div>
                     <!-- Modal body -->
-                    <div class="p-6 space-y-6">
-
-                        <ol class="relative border-l border-gray-200 dark:border-gray-700">
-                            <li class="mb-10 ml-6">
-
-                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                                    Personal Data<span
-                                        class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">Latest</span>
-                                </h3>
-
-                                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                                <dl
-                                    class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
-                                    <div class="flex flex-col pb-3">
-                                        <dt class="mb-1 text-gray-500 md:text-base dark:text-gray-400">Name</dt>
-                                        <dd class="text-base font-semibold">Siska Gustianah S.H.</dd>
+                    <div class="p-12  flex  max-h-[490px] overflow-y-scroll mb-2">
+                        <div class="container  md:ml-[80px] md:mr-[223px]">
+                            {{-- Work Experiences --}}
+                            <h1 class="font-semibold">Work Experiences</h1>
+                            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                                     </div>
-                                    <div class="flex flex-col pb-3">
-                                        <dt class="mb-1 text-gray-500 md:text-base dark:text-gray-400">Email</dt>
-                                        <dd class="text-base font-semibold">siska@rimlawyers.co.id</dd>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Junior Associate, Ferry Ericson Law Firm, Jakarta</span>
+                                    </h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                                     </div>
-                                    <div class="flex flex-col pb-3">
-                                        <dt class="mb-1 text-gray-500 md:text-base dark:text-gray-400">Phone Number
-                                        </dt>
-                                        <dd class="text-base font-semibold">+62 812-8662-6430</dd>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan
+                                        2022 - Oct 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Lawyer, POSBAKUMADIN, Tangerang civil court </span>
+                                        (POSBAKUM)</h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                                     </div>
-                                </dl>
-                            </li>
-                            <li class="mb-10 ml-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                                    <svg aria-hidden="true" class="w-3 h-3 text-blue-800 dark:text-blue-300"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </span>
-                                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Junior Associate
-                                </h3>
-                                <time
-                                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">November,
-                                    2022 - December, 2022 (Ferry Ericson law firm, Jakarta)</time>
-                                <div class="flex items-start space-x-3">
-                                    <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Meeting with client,
-                                        Making power of attorney, revocation power of attorney, somasi, answer to
-                                        somasi, Lawsuit, Registering e‑court Lawsuit, Making
-                                        Exception/Answers/Reconvencing
-                                        Lawsuit,
-                                        Replies, Duplications, Lists, Evidence and preparing Evidence
-                                        conculutions</span>
-                                </div>
-                            </li>
-                            <li class="mb-10 ml-6">
-                                <span
-                                    class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                                    <svg aria-hidden="true" class="w-3 h-3 text-blue-800 dark:text-blue-300"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </span>
-                                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Lawyer
-                                </h3>
-                                <time
-                                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January,
-                                    2022 - October, 2022 (POSBAKUMADIN, Tangerang civil court (POSBAKUM))</time>
-                                <div class="flex items-start space-x-3">
-                                    <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Meeting with client, Making power of attorney, revocation power of attorney,
-                                        somasi, answer to
-                                        somasi, Lawsuit, Registering e‑court Lawsuit, Making
-                                        Exception/Answers/Reconvencing
-                                        Lawsuit,
-                                        Replies, Duplications, Lists, Evidence and preparing Evidence conculutions,
-                                        giving
-                                        consultation for a
-                                        Jan 2022 - Oct 2022
-                                        Personal
-                                        Resume objective
-                                        Work experience
-                                        client.
-                                    </span>
-                                </div>
-                            </li>
-
-                        </ol>
-                        <div class="flex items-center">
-                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <title>First star</title>
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <title>Second star</title>
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <title>Third star</title>
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <title>Fourth star</title>
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
-                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <title>Fifth star</title>
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">marketing administration
+                                            , Intan Metalindo, Tangerang</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">May
+                                        2021 - Jul 2021
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Legal Company
+                                            , Pt. Atlas Pacific International, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jul
+                                        2018 - Aug 2019
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">PARALEGA
+                                            , Justice Law Office, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                            </ol>
                         </div>
-
-                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May
-                            25
-                            and is meant to ensure a common set of data rights in the European Union. It requires
-                            organizations to notify users as soon as possible of high-risk data breaches that could
-                            personally affect them.
-                        </p>
+                        <div class="container">
+                            {{-- Personal Summary --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Personal Summary</h1>
+                                <div class="container">
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500 "
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z">
+                                            </path>
+                                        </svg>
+                                        <span>Siska Gustinah S.H.</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z">
+                                            </path>
+                                        </svg>
+                                        <span>+62 812-8662-6430</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
+                                            </path>
+                                        </svg>
+                                        <span>siska@rimlawyers.co.id</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.125-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265zm-3 0a.375.375 0 11-.53 0L9 2.845l.265.265zm6 0a.375.375 0 11-.53 0L15 2.845l.265.265z">
+                                            </path>
+                                        </svg>
+                                        <span>August, 17 1996</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5">
+                                            </path>
+                                        </svg>
+                                        <span>Indonesia</span>
+                                    </li>
+                                </div>
+                            </div>
+                            {{-- Education and Qualifications --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Education and Qualifications</h1>
+                                <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2020
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">Bachelor of Law</span>, Bung Karno University,
+                                            Jakarta
+                                        </h3>
+                                    </li>
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2014
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">High School</span>, SMA 1 Tangerang, Tangerang
+                                        </h3>
+                                    </li>
+                                </ol>
+                            </div>
+                            {{-- Languages --}}
+                            <div class="container md:mt-[-24px]">
+                                <h1 class="font-semibold mb-[0.5rem]">Languages</h1>
+                                <ol class="items-center sm:flex">
+                                    <div class="container flex">
+                                        <li class="relative mb-6 sm:mb-0">
+                                            <div class="flex items-center">
+                                            </div>
+                                            <div class="sm:pr-8 md:pr-1 w-[100px]">
+                                                <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                        class="fi fi-gb outline outline-1 mr-2"></span>English</h3>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <!-- Modal footer -->
                     <div
                         class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                        <button data-modal-hide="staticModal" type="button"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
-                            accept</button>
-                        <button data-modal-hide="staticModal" type="button"
-                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CV Rizal -->
+        <div id="cv-rizal" tabindex="-1"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-7xl max-h-full ">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
+                        <h3
+                            class="text-xl font-medium text-gray-900 dark:text-white absolute w-[-webkit-fill-available] text-center mr-4">
+                            Curiculum Vitae
+                        </h3>
+                        <button type="button"
+                            class="z-10 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            data-modal-hide="cv-rizal">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-12  flex  max-h-[490px] overflow-y-scroll mb-2">
+                        <div class="container  md:ml-[80px] md:mr-[223px]">
+                            {{-- Work Experiences --}}
+                            <h1 class="font-semibold">Work Experiences</h1>
+                            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Junior Associate, Ferry Ericson Law Firm, Jakarta</span>
+                                    </h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan
+                                        2022 - Oct 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Lawyer, POSBAKUMADIN, Tangerang civil court </span>
+                                        (POSBAKUM)</h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">marketing administration
+                                            , Intan Metalindo, Tangerang</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">May
+                                        2021 - Jul 2021
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Legal Company
+                                            , Pt. Atlas Pacific International, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jul
+                                        2018 - Aug 2019
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">PARALEGA
+                                            , Justice Law Office, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="container">
+                            {{-- Personal Summary --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Personal Summary</h1>
+                                <div class="container">
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500 "
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z">
+                                            </path>
+                                        </svg>
+                                        <span>M. Rizal Situru, SH., MBL., Ph.D</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z">
+                                            </path>
+                                        </svg>
+                                        <span>+62 812-8662-6430</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
+                                            </path>
+                                        </svg>
+                                        <span>siska@rimlawyers.co.id</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.125-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265zm-3 0a.375.375 0 11-.53 0L9 2.845l.265.265zm6 0a.375.375 0 11-.53 0L15 2.845l.265.265z">
+                                            </path>
+                                        </svg>
+                                        <span>August, 17 1996</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5">
+                                            </path>
+                                        </svg>
+                                        <span>Indonesia</span>
+                                    </li>
+                                </div>
+                            </div>
+                            {{-- Education and Qualifications --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Education and Qualifications</h1>
+                                <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2020
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">Bachelor of Law</span>, Bung Karno University,
+                                            Jakarta
+                                        </h3>
+                                    </li>
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2014
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">High School</span>, SMA 1 Tangerang, Tangerang
+                                        </h3>
+                                    </li>
+                                </ol>
+                            </div>
+                            {{-- Languages --}}
+                            <div class="container md:mt-[-24px]">
+                                <h1 class="font-semibold mb-[0.5rem]">Languages</h1>
+                                <ol class="items-center sm:flex">
+                                    <div class="container flex">
+                                        <li class="relative mb-6 sm:mb-0">
+                                            <div class="flex items-center">
+                                            </div>
+                                            <div class="sm:pr-8 md:pr-1 w-[100px]">
+                                                <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                        class="fi fi-gb outline outline-1 mr-2"></span>English</h3>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div
+                        class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CV Ibrahim -->
+        <div id="cv-ibrahim" tabindex="-1"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-7xl max-h-full ">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
+                        <h3
+                            class="text-xl font-medium text-gray-900 dark:text-white absolute w-[-webkit-fill-available] text-center mr-4">
+                            Curiculum Vitae
+                        </h3>
+                        <button type="button"
+                            class="z-10 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            data-modal-hide="cv-ibrahim">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-12  flex  max-h-[490px] overflow-y-scroll mb-2">
+                        <div class="container  md:ml-[80px] md:mr-[223px]">
+                            {{-- Work Experiences --}}
+                            <h1 class="font-semibold">Work Experiences</h1>
+                            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Junior Associate, Ferry Ericson Law Firm,
+                                            Jakarta</span>
+                                    </h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan
+                                        2022 - Oct 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Lawyer, POSBAKUMADIN, Tangerang civil court </span>
+                                        (POSBAKUM)</h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">marketing administration
+                                            , Intan Metalindo, Tangerang</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">May
+                                        2021 - Jul 2021
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Legal Company
+                                            , Pt. Atlas Pacific International, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jul
+                                        2018 - Aug 2019
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">PARALEGA
+                                            , Justice Law Office, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="container">
+                            {{-- Personal Summary --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Personal Summary</h1>
+                                <div class="container">
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500 "
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z">
+                                            </path>
+                                        </svg>
+                                        <span>Ibrahim M Ikhsan, SH. MH.</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z">
+                                            </path>
+                                        </svg>
+                                        <span>+62 812-8662-6430</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
+                                            </path>
+                                        </svg>
+                                        <span>siska@rimlawyers.co.id</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.125-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265zm-3 0a.375.375 0 11-.53 0L9 2.845l.265.265zm6 0a.375.375 0 11-.53 0L15 2.845l.265.265z">
+                                            </path>
+                                        </svg>
+                                        <span>August, 17 1996</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5">
+                                            </path>
+                                        </svg>
+                                        <span>Indonesia</span>
+                                    </li>
+                                </div>
+                            </div>
+                            {{-- Education and Qualifications --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Education and Qualifications</h1>
+                                <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2020
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">Bachelor of Law</span>, Bung Karno University,
+                                            Jakarta
+                                        </h3>
+                                    </li>
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2014
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">High School</span>, SMA 1 Tangerang, Tangerang
+                                        </h3>
+                                    </li>
+                                </ol>
+                            </div>
+                            {{-- Languages --}}
+                            <div class="container md:mt-[-24px]">
+                                <h1 class="font-semibold mb-[0.5rem]">Languages</h1>
+                                <ol class="items-center sm:flex">
+                                    <div class="container flex">
+                                        <li class="relative mb-6 sm:mb-0">
+                                            <div class="flex items-center">
+                                            </div>
+                                            <div class="sm:pr-8 md:pr-1 w-[100px]">
+                                                <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                        class="fi fi-gb outline outline-1 mr-2"></span>English</h3>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div
+                        class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CV Mansyur -->
+        <div id="cv-mansyur" tabindex="-1"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-7xl max-h-full ">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
+                        <h3
+                            class="text-xl font-medium text-gray-900 dark:text-white absolute w-[-webkit-fill-available] text-center mr-4">
+                            Curiculum Vitae
+                        </h3>
+                        <button type="button"
+                            class="z-10 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            data-modal-hide="cv-mansyur">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-12  flex  max-h-[490px] overflow-y-scroll mb-2">
+                        <div class="container  md:ml-[80px] md:mr-[223px]">
+                            {{-- Work Experiences --}}
+                            <h1 class="font-semibold">Work Experiences</h1>
+                            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Junior Associate, Ferry Ericson Law Firm,
+                                            Jakarta</span>
+                                    </h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan
+                                        2022 - Oct 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Lawyer, POSBAKUMADIN, Tangerang civil court </span>
+                                        (POSBAKUM)</h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov
+                                        2022 - Dec 2022
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">marketing administration
+                                            , Intan Metalindo, Tangerang</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">May
+                                        2021 - Jul 2021
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Legal Company
+                                            , Pt. Atlas Pacific International, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jul
+                                        2018 - Aug 2019
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">PARALEGA
+                                            , Justice Law Office, jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div
+                                        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                    </div>
+                                    <time
+                                        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec
+                                        2017 - Jun 2018
+                                    </time>
+                                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                            class="capitalize">Geral Affair Logistic Admin
+                                            , PT.Sinergy, Jakarta</span></h3>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="container">
+                            {{-- Personal Summary --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Personal Summary</h1>
+                                <div class="container">
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500 "
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z">
+                                            </path>
+                                        </svg>
+                                        <span>Mansyur Naseh Husein, SE, SH, MH.</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z">
+                                            </path>
+                                        </svg>
+                                        <span>+62 812-8662-6430</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
+                                            </path>
+                                        </svg>
+                                        <span>siska@rimlawyers.co.id</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.125-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265zm-3 0a.375.375 0 11-.53 0L9 2.845l.265.265zm6 0a.375.375 0 11-.53 0L15 2.845l.265.265z">
+                                            </path>
+                                        </svg>
+                                        <span>August, 17 1996</span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <!-- Icon -->
+                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                                            fill="none" stroke="currentColor" stroke-width="1.5"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5">
+                                            </path>
+                                        </svg>
+                                        <span>Indonesia</span>
+                                    </li>
+                                </div>
+                            </div>
+                            {{-- Education and Qualifications --}}
+                            <div class="container">
+                                <h1 class="font-semibold mb-[0.5rem]">Education and Qualifications</h1>
+                                <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2020
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">Bachelor of Law</span>, Bung Karno University,
+                                            Jakarta
+                                        </h3>
+                                    </li>
+                                    <li class="mb-10 ml-4">
+                                        <div
+                                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                                        </div>
+                                        <time
+                                            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                                            Jul 2014
+                                        </time>
+                                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                class="capitalize">High School</span>, SMA 1 Tangerang, Tangerang
+                                        </h3>
+                                    </li>
+                                </ol>
+                            </div>
+                            {{-- Languages --}}
+                            <div class="container md:mt-[-24px]">
+                                <h1 class="font-semibold mb-[0.5rem]">Languages</h1>
+                                <ol class="items-center sm:flex">
+                                    <div class="container flex">
+                                        <li class="relative mb-6 sm:mb-0">
+                                            <div class="flex items-center">
+                                            </div>
+                                            <div class="sm:pr-8 md:pr-1 w-[100px]">
+                                                <h3 class="text-sm font-semibold text-gray-900 dark:text-white"><span
+                                                        class="fi fi-gb outline outline-1 mr-2"></span>English</h3>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div
+                        class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
                     </div>
                 </div>
             </div>

@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "countup.js": "^2.6.2",
+        "flag-icons": "^6.7.0",
         "taos": "^1.0.3"
     }
 }
